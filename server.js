@@ -1,0 +1,12 @@
+const express=require("express")
+const app=express()
+const cors=require("cors")
+const dotenv=require("dotenv")
+const loanPredictionRoutes=require("./routes/loanPredictionRoutes")
+app.use(cors())
+app.use(express.json())
+app.use("/",loanPredictionRoutes)
+app.get("/",(_,res)=>{
+    res.send("EXPRESS SERVER RUNNING SUCCESSFULLY")
+})
+app.listen(3000,console.log("Server running on port:3000"))
