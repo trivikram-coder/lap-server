@@ -9,4 +9,4 @@ app.use("/",loanPredictionRoutes)
 app.get("/",(_,res)=>{
     res.send("EXPRESS SERVER RUNNING SUCCESSFULLY")
 })
-app.listen(process.env.PORT || 8080,console.log("Server running on port:3000"))
+app.listen(process.env.PORT,console.log("Server running on port:3000"))
