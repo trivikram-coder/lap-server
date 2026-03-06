@@ -1,0 +1,19 @@
+name: LAP APP
+on:
+    push:
+        branches:
+            - main
+            - master
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Action checkout
+              uses: actions/checkout@v3
+
+            - name: Node js setup
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+            - name: Install dependencies
+              run: npm install

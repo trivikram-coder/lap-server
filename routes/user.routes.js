@@ -1,0 +1,10 @@
+const express=require("express")
+const { checkEmail, resetPassword, updateUser, getUser, login, register } = require("../controllers/user.controller")
+const router=express.Router()
+router.post("/register",register)
+router.post("/login",login)
+router.post("/reset-password",resetPassword)
+router.get("/users/profile/:id",getUser)
+router.put("/users/:id",updateUser)
+router.get("/check-email/:email",checkEmail)
+module.exports=router
