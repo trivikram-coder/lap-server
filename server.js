@@ -14,4 +14,4 @@ app.get("/",(_,res)=>{
     res.send("EXPRESS SERVER RUNNING SUCCESSFULLY")
 })
 connectDb()
-app.listen(process.env.PORT,console.log("Server running on port:",process.env.PORT))
+app.listen(process.env.PORT,"0.0.0.0",()=>console.log("Server running on port:",process.env.PORT))
