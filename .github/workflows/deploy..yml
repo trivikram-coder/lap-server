@@ -30,6 +30,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd ~/lap-server
-            git pull origin main
+            git pull origin master
             npm install
             pm2 restart lap-server || pm2 start index.js --name lap-server
