@@ -13,7 +13,7 @@ const loanApplicationSchema = new mongoose.Schema(
 
     married: {
       type: String,
-      enum: ["Yes", "No"],
+      enum: ["married", "single"],
       required: true
     },
 
