@@ -32,4 +32,4 @@ jobs:
             cd ~/lap-server
             git pull origin master
             npm install
-            pm2 restart lap-server || pm2 start index.js --name lap-server
+            pm2 restart lap-server || pm2 start server.js --name lap-server
