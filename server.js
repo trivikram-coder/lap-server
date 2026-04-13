@@ -11,7 +11,7 @@ app.use(express.json())
 app.use("/api/predict",loanPredictionRoutes)
 app.use("/api/auth",userRoutes)
 app.get("/",(_,res)=>{
-    res.send("LAP API SERVER RUNNING SUCCESSFULLY ✅✅✅")
+    res.send("LAP SERVER RUNNING SUCCESSFULLY ✅✅✅")
 })
 connectDb()
 app.listen(process.env.PORT,"0.0.0.0",()=>console.log("Server running on port:",process.env.PORT))
